@@ -1,181 +1,730 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<div style="text-align:center; margin-top:30px;">
-    <img src="profile.jpg"
-         alt="Anika Islam"
-         style="width:150px; height:150px; border-radius:50%; object-fit:cover;">
-</div>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Anika Islam | Portfolio</title>
+<title>Anika Islam | CSE Student & Developer</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f7fb;
-            color: #222;
-        }
+body{
+    font-family:Arial, sans-serif;
+    background:#080b14;
+    color:#ffffff;
+    line-height:1.6;
+}
 
-        header {
-            background: #1e293b;
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
+/* NAVBAR */
+nav{
+    position:fixed;
+    top:15px;
+    left:50%;
+    transform:translateX(-50%);
+    width:92%;
+    max-width:1100px;
+    padding:15px 22px;
+    background:rgba(15,18,30,0.85);
+    backdrop-filter:blur(15px);
+    border:1px solid #252a40;
+    border-radius:18px;
+    z-index:1000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
 
-        header h1 {
-            font-size: 38px;
-            margin-bottom: 10px;
-        }
+.logo{
+    font-size:23px;
+    font-weight:bold;
+}
 
-        header p {
-            font-size: 18px;
-        }
+.logo span{
+    color:#00d9ff;
+}
 
-        nav {
-            background: #0f172a;
-            text-align: center;
-            padding: 15px 5px;
-        }
+nav a{
+    color:#ffffff;
+    text-decoration:none;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 8px;
-            font-size: 14px;
-        }
+.nav-links{
+    display:flex;
+    gap:22px;
+    font-size:14px;
+}
 
-        section {
-            max-width: 900px;
-            margin: 25px auto;
-            padding: 30px;
-            background: white;
-            border-radius: 15px;
-        }
+.nav-links a{
+    color:#b7bfd5;
+}
 
-        section h2 {
-            color: #1e293b;
-            margin-bottom: 15px;
-        }
+.nav-links a:hover{
+    color:#00d9ff;
+}
 
-        section p {
-            line-height: 1.7;
-        }
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding:120px 7% 70px;
+    background:
+    radial-gradient(circle at 15% 20%,#30206055,transparent 30%),
+    radial-gradient(circle at 85% 20%,#006d8050,transparent 30%);
+}
 
-        .skills span {
-            display: inline-block;
-            background: #1e293b;
-            color: white;
-            padding: 9px 16px;
-            margin: 5px;
-            border-radius: 20px;
-        }
+.hero-content{
+    max-width:1150px;
+    width:100%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:50px;
+    align-items:center;
+}
 
-        .project {
-            background: #f1f5f9;
-            padding: 18px;
-            margin-top: 15px;
-            border-radius: 10px;
-        }
+.badge{
+    display:inline-block;
+    padding:8px 15px;
+    border:1px solid #00d9ff55;
+    border-radius:30px;
+    color:#8eeeff;
+    background:#00d9ff10;
+    margin-bottom:20px;
+}
 
-        footer {
-            background: #0f172a;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-        }
-    </style>
+h1{
+    font-size:clamp(45px,7vw,80px);
+    line-height:1.05;
+}
+
+.gradient{
+    background:linear-gradient(90deg,#00d9ff,#7c5cff,#ff67d8);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    color:#aab2c8;
+    font-size:18px;
+    max-width:650px;
+    margin:25px 0;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:13px 20px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:bold;
+    display:inline-block;
+    transition:.3s;
+}
+
+.primary{
+    background:linear-gradient(90deg,#7c5cff,#00bfff);
+    color:white;
+}
+
+.secondary{
+    border:1px solid #30364e;
+    color:white;
+    background:#ffffff08;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+/* PROFILE */
+.profile{
+    background:#ffffff0c;
+    border:1px solid #ffffff18;
+    border-radius:30px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 20px 80px #00000055;
+}
+
+.avatar{
+    width:190px;
+    height:190px;
+    margin:auto;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:60px;
+    font-weight:bold;
+    background:linear-gradient(135deg,#7c5cff,#00d9ff);
+    box-shadow:0 0 70px #7c5cff55;
+}
+
+.profile h2{
+    margin-top:22px;
+}
+
+.profile p{
+    font-size:14px;
+    margin:5px auto;
+}
+
+/* SECTIONS */
+section{
+    padding:90px 7%;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+.section-title{
+    font-size:40px;
+    margin-bottom:8px;
+}
+
+.section-sub{
+    color:#9da6bd;
+    margin-bottom:30px;
+}
+
+/* CARD */
+.card{
+    background:#ffffff09;
+    border:1px solid #ffffff12;
+    border-radius:20px;
+    padding:25px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    border-color:#00d9ff55;
+    box-shadow:0 15px 45px #00000035;
+}
+
+/* SKILLS */
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.skill{
+    padding:10px 16px;
+    border-radius:12px;
+    background:#ffffff0a;
+    border:1px solid #ffffff15;
+    color:#dce5ff;
+}
+
+/* PROJECTS */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.project-icon{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.project h3{
+    margin-bottom:10px;
+}
+
+.project p{
+    color:#aab2c8;
+    font-size:14px;
+}
+
+.tag{
+    display:inline-block;
+    margin-top:20px;
+    color:#8eeeff;
+    font-size:13px;
+}
+
+/* EDUCATION */
+.timeline{
+    border-left:2px solid #7c5cff;
+    padding-left:25px;
+}
+
+.timeline-item{
+    margin-bottom:30px;
+    position:relative;
+}
+
+.timeline-item::before{
+    content:"";
+    width:13px;
+    height:13px;
+    border-radius:50%;
+    background:#00d9ff;
+    position:absolute;
+    left:-32px;
+    top:8px;
+}
+
+.timeline-item p{
+    color:#aab2c8;
+}
+
+/* CONTACT */
+.contact{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.contact-box{
+    background:#ffffff09;
+    border:1px solid #ffffff15;
+    border-radius:20px;
+    padding:25px;
+}
+
+.contact-box p{
+    color:#aab2c8;
+    margin-top:7px;
+}
+
+.contact-box a{
+    color:#00d9ff;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:35px;
+    border-top:1px solid #ffffff12;
+    color:#8992aa;
+    font-size:14px;
+}
+
+/* MOBILE */
+@media(max-width:800px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero-content{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .hero p{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .buttons{
+        justify-content:center;
+    }
+
+    .profile{
+        max-width:400px;
+        margin:auto;
+    }
+
+    .projects{
+        grid-template-columns:1fr;
+    }
+
+    .contact{
+        grid-template-columns:1fr;
+    }
+
+    .section-title{
+        font-size:34px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Anika Islam</h1>
-        <p>CSE Student | Future Web Developer</p>
-    </header>
+<!-- NAVIGATION -->
+<nav>
 
-    <nav>
+    <a href="#home" class="logo">
+        Anika<span>.</span>
+    </a>
+
+    <div class="nav-links">
         <a href="#about">About</a>
-        <a href="#education">Education</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
-    </nav>
+    </div>
 
-    <section id="about">
-        <h2>About Me</h2>
+</nav>
 
-        <p>
-            Hello! I am Anika Islam, a Computer Science and
-            Engineering student. I am interested in programming,
-            web development and technology.
-        </p>
-    </section>
 
-    <section id="education">
-        <h2>Education</h2>
+<!-- HERO SECTION -->
+<section class="hero" id="home">
 
-        <p>
-            <b>Department:</b> Computer Science and Engineering (CSE)
-        </p>
+<div class="hero-content">
 
-        <p>
-            <b>University:</b> CCN University of Science and Technology
-        </p>
-    </section>
+    <div>
 
-    <section id="skills">
-        <h2>My Skills</h2>
-
-        <div class="skills">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>C</span>
-            <span>C++</span>
-            <span>Java</span>
-            <span>MySQL</span>
+        <div class="badge">
+            👋 Hello, Welcome to my Portfolio
         </div>
-    </section>
 
-    <section id="projects">
-        <h2>My Projects</h2>
+        <h1>
+            Hi, I'm
+            <span class="gradient">
+                Anika Islam
+            </span>
+        </h1>
 
-        <div class="project">
-            <h3>Student Management System</h3>
+        <p>
+            Computer Science & Engineering student and aspiring software developer.
+            I love creating modern websites, learning new technologies and turning
+            ideas into useful digital projects.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#projects" class="btn primary">
+                View My Work →
+            </a>
+
+            <a href="#contact" class="btn secondary">
+                Let's Connect
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="profile">
+
+        <div class="avatar">
+            AI
+        </div>
+
+        <h2>
+            Computer Science & Engineering
+        </h2>
+
+        <p>
+            Student • Developer • Learner
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- ABOUT -->
+<section id="about">
+
+<div class="container">
+
+    <h2 class="section-title">
+        About Me
+    </h2>
+
+    <p class="section-sub">
+        Get to know me
+    </p>
+
+    <div class="card">
+
+        <p>
+            I am a Computer Science & Engineering student who enjoys
+            programming, database management and web development.
+            I am continuously learning new technologies and working
+            on academic and personal projects to improve my skills.
+        </p>
+
+        <br>
+
+        <p>
+            My goal is to become a skilled software professional and
+            build meaningful, user-friendly digital solutions.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- SKILLS -->
+<section id="skills">
+
+<div class="container">
+
+    <h2 class="section-title">
+        My Skills
+    </h2>
+
+    <p class="section-sub">
+        Technologies and areas I'm learning
+    </p>
+
+    <div class="skills">
+
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">C</span>
+        <span class="skill">C++</span>
+        <span class="skill">MySQL</span>
+        <span class="skill">DBMS</span>
+        <span class="skill">Data Structures</span>
+        <span class="skill">Algorithms</span>
+        <span class="skill">Git & GitHub</span>
+        <span class="skill">Web Development</span>
+        <span class="skill">Responsive Design</span>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- PROJECTS -->
+<section id="projects">
+
+<div class="container">
+
+    <h2 class="section-title">
+        Featured Projects
+    </h2>
+
+    <p class="section-sub">
+        Some of my academic and development projects
+    </p>
+
+
+    <div class="projects">
+
+
+        <div class="card">
+
+            <div class="project-icon">
+                🎓
+            </div>
+
+            <h3>
+                Student Management System
+            </h3>
+
             <p>
-                A database management project using MySQL.
+                A database management project designed to store
+                and manage student information efficiently.
             </p>
+
+            <span class="tag">
+                MySQL • DBMS
+            </span>
+
         </div>
 
-        <div class="project">
-            <h3>Lost and Found Website</h3>
+
+
+        <div class="card">
+
+            <div class="project-icon">
+                🔎
+            </div>
+
+            <h3>
+                Lost & Found Website
+            </h3>
+
             <p>
-                A website project for managing lost and found items.
+                A website project designed to help users report,
+                manage and find lost items.
             </p>
+
+            <span class="tag">
+                Web Development
+            </span>
+
         </div>
 
-    </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
 
-        <p>Email: anikaislamshamonti@gmail.com</p>
-        <p>Phone: 01972960942</p>
-        <p>Location: Cumilla, Bangladesh</p>
-    </section>
+        <div class="card">
 
-    <footer>
-        <p>© 2026 Anika Islam | Portfolio</p>
-    </footer>
+            <div class="project-icon">
+                ⚡
+            </div>
+
+            <h3>
+                Academic Projects
+            </h3>
+
+            <p>
+                Hands-on work involving programming, algorithms,
+                databases, microprocessors and software development.
+            </p>
+
+            <span class="tag">
+                CSE • Learning
+            </span>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- EDUCATION -->
+<section id="education">
+
+<div class="container">
+
+    <h2 class="section-title">
+        Education
+    </h2>
+
+    <p class="section-sub">
+        My academic journey
+    </p>
+
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <h3>
+                B.Sc. in Computer Science & Engineering
+            </h3>
+
+            <p>
+                CCN University of Science and Technology
+            </p>
+
+            <p>
+                Currently pursuing
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <h3>
+                Continuous Learning
+            </h3>
+
+            <p>
+                Programming • Database Management • Algorithms
+                • Web Development • Computer Architecture
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+<div class="container">
+
+    <h2 class="section-title">
+        Let's Connect
+    </h2>
+
+    <p class="section-sub">
+        Have a project, opportunity or idea? I'd love to hear from you.
+    </p>
+
+
+    <div class="contact">
+
+
+        <div class="contact-box">
+
+            <h3>
+                📩 Email
+            </h3>
+
+            <p>
+                anikaislamshamonti@gmail.com
+            </p>
+
+        </div>
+
+
+        <div class="contact-box">
+
+            <h3>
+                🌐 GitHub
+            </h3>
+
+            <p>
+
+                <a
+                href="https://github.com/anikaislam-618"
+                target="_blank">
+
+                github.com/anikaislam-618
+
+                </a>
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+<footer>
+
+    © 2026 Anika Islam
+    • Built with HTML & CSS
+
+</footer>
+
 
 </body>
 </html>
