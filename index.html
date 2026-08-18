@@ -4,7 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Anika Islam | CSE Student & Developer</title>
+<title>Anika Islam Shamonti | Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{
@@ -15,106 +19,100 @@
 }
 
 body{
-    font-family:Arial, sans-serif;
-    background:#080b14;
-    color:#ffffff;
+    font-family:'Poppins',sans-serif;
+    background:#080b16;
+    color:#fff;
     line-height:1.6;
 }
 
-/* NAVBAR */
 nav{
     position:fixed;
-    top:15px;
-    left:50%;
-    transform:translateX(-50%);
-    width:92%;
-    max-width:1100px;
-    padding:15px 22px;
-    background:rgba(15,18,30,0.85);
-    backdrop-filter:blur(15px);
-    border:1px solid #252a40;
-    border-radius:18px;
-    z-index:1000;
+    top:0;
+    width:100%;
+    padding:18px 8%;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    background:rgba(8,11,22,.85);
+    backdrop-filter:blur(15px);
+    z-index:1000;
+    border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .logo{
-    font-size:23px;
-    font-weight:bold;
+    font-size:25px;
+    font-weight:800;
+    color:#8b5cf6;
 }
 
 .logo span{
-    color:#00d9ff;
+    color:#fff;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
 }
 
 nav a{
-    color:#ffffff;
     text-decoration:none;
+    color:#ddd;
+    font-weight:500;
+    transition:.3s;
 }
 
-.nav-links{
-    display:flex;
-    gap:22px;
-    font-size:14px;
+nav a:hover{
+    color:#a78bfa;
 }
 
-.nav-links a{
-    color:#b7bfd5;
+section{
+    padding:100px 8%;
 }
 
-.nav-links a:hover{
-    color:#00d9ff;
-}
-
-/* HERO */
-.hero{
+#home{
     min-height:100vh;
     display:flex;
     align-items:center;
-    padding:120px 7% 70px;
-    background:
-    radial-gradient(circle at 15% 20%,#30206055,transparent 30%),
-    radial-gradient(circle at 85% 20%,#006d8050,transparent 30%);
-}
-
-.hero-content{
-    max-width:1150px;
-    width:100%;
-    margin:auto;
-    display:grid;
-    grid-template-columns:1.2fr .8fr;
+    justify-content:space-between;
     gap:50px;
-    align-items:center;
+    padding-top:130px;
+    background:
+    radial-gradient(circle at 80% 30%,rgba(139,92,246,.20),transparent 30%),
+    radial-gradient(circle at 20% 70%,rgba(59,130,246,.15),transparent 30%);
 }
 
-.badge{
-    display:inline-block;
-    padding:8px 15px;
-    border:1px solid #00d9ff55;
-    border-radius:30px;
-    color:#8eeeff;
-    background:#00d9ff10;
-    margin-bottom:20px;
+.hero-text{
+    max-width:650px;
+}
+
+.small{
+    color:#a78bfa;
+    font-weight:600;
+    letter-spacing:2px;
+    margin-bottom:12px;
 }
 
 h1{
-    font-size:clamp(45px,7vw,80px);
-    line-height:1.05;
+    font-size:clamp(42px,6vw,75px);
+    line-height:1.1;
+    margin-bottom:20px;
 }
 
-.gradient{
-    background:linear-gradient(90deg,#00d9ff,#7c5cff,#ff67d8);
-    -webkit-background-clip:text;
-    color:transparent;
+h1 span{
+    color:#8b5cf6;
 }
 
-.hero p{
-    color:#aab2c8;
-    font-size:18px;
-    max-width:650px;
-    margin:25px 0;
+.typing{
+    font-size:24px;
+    color:#c4b5fd;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    color:#b8b8c7;
+    max-width:600px;
+    margin-bottom:30px;
 }
 
 .buttons{
@@ -124,234 +122,290 @@ h1{
 }
 
 .btn{
-    padding:13px 20px;
-    border-radius:12px;
-    text-decoration:none;
-    font-weight:bold;
     display:inline-block;
+    padding:13px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
     transition:.3s;
 }
 
 .primary{
-    background:linear-gradient(90deg,#7c5cff,#00bfff);
+    background:linear-gradient(135deg,#7c3aed,#4f46e5);
     color:white;
+    box-shadow:0 10px 30px rgba(124,58,237,.3);
 }
 
 .secondary{
-    border:1px solid #30364e;
-    color:white;
-    background:#ffffff08;
+    border:1px solid #7c3aed;
+    color:#c4b5fd;
 }
 
 .btn:hover{
-    transform:translateY(-4px);
+    transform:translateY(-3px);
 }
 
-/* PROFILE */
 .profile{
-    background:#ffffff0c;
-    border:1px solid #ffffff18;
-    border-radius:30px;
-    padding:35px;
+    width:330px;
+    height:400px;
+    border-radius:40px;
+    padding:7px;
+    background:linear-gradient(135deg,#8b5cf6,#ec4899,#3b82f6);
+    box-shadow:0 0 70px rgba(139,92,246,.35);
+}
+
+.profile img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center top;
+    border-radius:34px;
+    background:white;
+}
+
+.title{
     text-align:center;
-    box-shadow:0 20px 80px #00000055;
+    margin-bottom:55px;
 }
 
-.avatar{
-    width:190px;
-    height:190px;
-    margin:auto;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:60px;
-    font-weight:bold;
-    background:linear-gradient(135deg,#7c5cff,#00d9ff);
-    box-shadow:0 0 70px #7c5cff55;
-}
-
-.profile h2{
-    margin-top:22px;
-}
-
-.profile p{
-    font-size:14px;
-    margin:5px auto;
-}
-
-/* SECTIONS */
-section{
-    padding:90px 7%;
-}
-
-.container{
-    max-width:1100px;
-    margin:auto;
-}
-
-.section-title{
-    font-size:40px;
-    margin-bottom:8px;
-}
-
-.section-sub{
-    color:#9da6bd;
-    margin-bottom:30px;
-}
-
-/* CARD */
-.card{
-    background:#ffffff09;
-    border:1px solid #ffffff12;
-    border-radius:20px;
-    padding:25px;
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-7px);
-    border-color:#00d9ff55;
-    box-shadow:0 15px 45px #00000035;
-}
-
-/* SKILLS */
-.skills{
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
-}
-
-.skill{
-    padding:10px 16px;
-    border-radius:12px;
-    background:#ffffff0a;
-    border:1px solid #ffffff15;
-    color:#dce5ff;
-}
-
-/* PROJECTS */
-.projects{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.project-icon{
-    font-size:35px;
-    margin-bottom:15px;
-}
-
-.project h3{
+.title h2{
+    font-size:38px;
     margin-bottom:10px;
 }
 
-.project p{
-    color:#aab2c8;
-    font-size:14px;
+.title span{
+    color:#8b5cf6;
 }
 
-.tag{
-    display:inline-block;
-    margin-top:20px;
-    color:#8eeeff;
-    font-size:13px;
+.title p{
+    color:#9999aa;
 }
 
-/* EDUCATION */
-.timeline{
-    border-left:2px solid #7c5cff;
-    padding-left:25px;
-}
-
-.timeline-item{
-    margin-bottom:30px;
-    position:relative;
-}
-
-.timeline-item::before{
-    content:"";
-    width:13px;
-    height:13px;
-    border-radius:50%;
-    background:#00d9ff;
-    position:absolute;
-    left:-32px;
-    top:8px;
-}
-
-.timeline-item p{
-    color:#aab2c8;
-}
-
-/* CONTACT */
-.contact{
+.about{
     display:grid;
     grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about-card{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    padding:30px;
+    border-radius:20px;
+}
+
+.about-card p{
+    color:#b5b5c4;
+}
+
+.info{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    margin-top:25px;
+}
+
+.info div{
+    background:rgba(139,92,246,.08);
+    padding:15px;
+    border-radius:12px;
+}
+
+.info strong{
+    color:#a78bfa;
+}
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
     gap:20px;
 }
 
-.contact-box{
-    background:#ffffff09;
-    border:1px solid #ffffff15;
-    border-radius:20px;
+.skill{
     padding:25px;
+    text-align:center;
+    border-radius:18px;
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    transition:.3s;
 }
 
-.contact-box p{
-    color:#aab2c8;
-    margin-top:7px;
+.skill:hover{
+    transform:translateY(-8px);
+    border-color:#8b5cf6;
+    box-shadow:0 15px 40px rgba(139,92,246,.15);
 }
 
-.contact-box a{
-    color:#00d9ff;
+.skill .icon{
+    font-size:38px;
+    margin-bottom:10px;
 }
 
-/* FOOTER */
+.skill h3{
+    color:#ddd;
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.project{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    padding:30px;
+    border-radius:20px;
+    transition:.3s;
+}
+
+.project:hover{
+    transform:translateY(-8px);
+    border-color:#8b5cf6;
+}
+
+.project h3{
+    color:#c4b5fd;
+    margin-bottom:12px;
+}
+
+.project p{
+    color:#aaaabb;
+}
+
+.education{
+    max-width:800px;
+    margin:auto;
+}
+
+.edu{
+    padding:25px;
+    margin-bottom:20px;
+    border-left:4px solid #8b5cf6;
+    background:rgba(255,255,255,.04);
+    border-radius:0 15px 15px 0;
+}
+
+.edu h3{
+    color:#c4b5fd;
+}
+
+.edu p{
+    color:#aaaabb;
+}
+
+.contact-box{
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+    padding:45px 30px;
+    background:linear-gradient(145deg,rgba(124,58,237,.15),rgba(59,130,246,.08));
+    border:1px solid rgba(139,92,246,.25);
+    border-radius:25px;
+}
+
+.email{
+    display:inline-block;
+    margin:20px 0;
+    color:#c4b5fd;
+    font-size:18px;
+    text-decoration:none;
+}
+
+.social{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.social a{
+    padding:10px 18px;
+    border:1px solid #6d28d9;
+    border-radius:25px;
+    color:#ddd;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.social a:hover{
+    background:#7c3aed;
+}
+
 footer{
     text-align:center;
-    padding:35px;
-    border-top:1px solid #ffffff12;
-    color:#8992aa;
-    font-size:14px;
+    padding:30px;
+    color:#777;
+    border-top:1px solid rgba(255,255,255,.08);
 }
 
-/* MOBILE */
 @media(max-width:800px){
 
-    .nav-links{
-        display:none;
+    nav{
+        padding:15px 5%;
     }
 
-    .hero-content{
-        grid-template-columns:1fr;
+    nav ul{
+        gap:12px;
+    }
+
+    nav a{
+        font-size:12px;
+    }
+
+    #home{
+        flex-direction:column-reverse;
         text-align:center;
+        padding-top:130px;
     }
 
-    .hero p{
-        margin-left:auto;
-        margin-right:auto;
+    .profile{
+        width:270px;
+        height:330px;
     }
 
     .buttons{
         justify-content:center;
     }
 
-    .profile{
-        max-width:400px;
-        margin:auto;
-    }
-
-    .projects{
+    .about{
         grid-template-columns:1fr;
     }
 
-    .contact{
+    .info{
         grid-template-columns:1fr;
     }
 
-    .section-title{
-        font-size:34px;
+    section{
+        padding:80px 5%;
+    }
+}
+
+@media(max-width:500px){
+
+    nav .logo{
+        font-size:18px;
+    }
+
+    nav ul{
+        gap:8px;
+    }
+
+    nav a{
+        font-size:10px;
+    }
+
+    h1{
+        font-size:40px;
+    }
+
+    .typing{
+        font-size:19px;
+    }
+
+    .title h2{
+        font-size:30px;
     }
 }
 </style>
@@ -359,370 +413,312 @@ footer{
 
 <body>
 
-<!-- NAVIGATION -->
 <nav>
+    <div class="logo">Anika<span>.</span></div>
 
-    <a href="#home" class="logo">
-        Anika<span>.</span>
-    </a>
-
-    <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-    </div>
-
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 </nav>
 
 
-<!-- HERO SECTION -->
-<section class="hero" id="home">
+<!-- HOME -->
+<section id="home">
 
-<div class="hero-content">
+    <div class="hero-text">
 
-    <div>
-
-        <div class="badge">
-            👋 Hello, Welcome to my Portfolio
-        </div>
+        <div class="small">WELCOME TO MY PORTFOLIO</div>
 
         <h1>
-            Hi, I'm
-            <span class="gradient">
-                Anika Islam
-            </span>
+            Hi, I'm <span>Anika Islam Shamonti</span>
         </h1>
 
+        <div class="typing">
+            CSE Student | Programmer | Web Enthusiast
+        </div>
+
         <p>
-            Computer Science & Engineering student and aspiring software developer.
-            I love creating modern websites, learning new technologies and turning
-            ideas into useful digital projects.
+            I'm a passionate Computer Science & Engineering student
+            who loves programming, web development and learning
+            new technologies.
         </p>
 
         <div class="buttons">
+            <a href="#projects" class="btn primary">View My Work</a>
 
-            <a href="#projects" class="btn primary">
-                View My Work →
+            <a href="mailto:anikaislamshamonti@gmail.com"
+               class="btn secondary">
+               Contact Me
             </a>
-
-            <a href="#contact" class="btn secondary">
-                Let's Connect
-            </a>
-
         </div>
 
     </div>
 
 
     <div class="profile">
-
-        <div class="avatar">
-            AI
-        </div>
-
-        <h2>
-            Computer Science & Engineering
-        </h2>
-
-        <p>
-            Student • Developer • Learner
-        </p>
-
+        <img src="profile.png" alt="Anika Islam Shamonti">
     </div>
 
-</div>
-
 </section>
-
 
 
 <!-- ABOUT -->
 <section id="about">
 
-<div class="container">
+    <div class="title">
+        <h2>About <span>Me</span></h2>
+        <p>Get to know me</p>
+    </div>
 
-    <h2 class="section-title">
-        About Me
-    </h2>
+    <div class="about">
 
-    <p class="section-sub">
-        Get to know me
-    </p>
+        <div class="about-card">
 
-    <div class="card">
+            <h2>Hello! 👋</h2>
 
-        <p>
-            I am a Computer Science & Engineering student who enjoys
-            programming, database management and web development.
-            I am continuously learning new technologies and working
-            on academic and personal projects to improve my skills.
-        </p>
+            <br>
 
-        <br>
+            <p>
+                I'm Anika Islam Shamonti, a Computer Science &
+                Engineering student with a strong interest in
+                programming, software development and modern
+                web technologies.
+            </p>
 
-        <p>
-            My goal is to become a skilled software professional and
-            build meaningful, user-friendly digital solutions.
-        </p>
+            <br>
+
+            <p>
+                I enjoy creating beautiful, useful and user-friendly
+                digital experiences while continuously improving
+                my technical skills.
+            </p>
+
+        </div>
+
+
+        <div class="about-card">
+
+            <h2>Quick Information</h2>
+
+            <div class="info">
+
+                <div>
+                    <strong>Name</strong><br>
+                    Anika Islam Shamonti
+                </div>
+
+                <div>
+                    <strong>Field</strong><br>
+                    Computer Science & Engineering
+                </div>
+
+                <div>
+                    <strong>Interest</strong><br>
+                    Web & Software Development
+                </div>
+
+                <div>
+                    <strong>Email</strong><br>
+                    anikaislamshamonti@gmail.com
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
-</div>
-
 </section>
-
 
 
 <!-- SKILLS -->
 <section id="skills">
 
-<div class="container">
-
-    <h2 class="section-title">
-        My Skills
-    </h2>
-
-    <p class="section-sub">
-        Technologies and areas I'm learning
-    </p>
+    <div class="title">
+        <h2>My <span>Skills</span></h2>
+        <p>Technologies and tools I work with</p>
+    </div>
 
     <div class="skills">
 
-        <span class="skill">HTML</span>
-        <span class="skill">CSS</span>
-        <span class="skill">JavaScript</span>
-        <span class="skill">C</span>
-        <span class="skill">C++</span>
-        <span class="skill">MySQL</span>
-        <span class="skill">DBMS</span>
-        <span class="skill">Data Structures</span>
-        <span class="skill">Algorithms</span>
-        <span class="skill">Git & GitHub</span>
-        <span class="skill">Web Development</span>
-        <span class="skill">Responsive Design</span>
+        <div class="skill">
+            <div class="icon">🌐</div>
+            <h3>HTML</h3>
+        </div>
+
+        <div class="skill">
+            <div class="icon">🎨</div>
+            <h3>CSS</h3>
+        </div>
+
+        <div class="skill">
+            <div class="icon">⚡</div>
+            <h3>JavaScript</h3>
+        </div>
+
+        <div class="skill">
+            <div class="icon">💻</div>
+            <h3>C Programming</h3>
+        </div>
+
+        <div class="skill">
+            <div class="icon">🚀</div>
+            <h3>C++</h3>
+        </div>
+
+        <div class="skill">
+            <div class="icon">☕</div>
+            <h3>Java</h3>
+        </div>
+
+        <div class="skill">
+            <div class="icon">🗄️</div>
+            <h3>MySQL</h3>
+        </div>
+
+        <div class="skill">
+            <div class="icon">🐙</div>
+            <h3>GitHub</h3>
+        </div>
 
     </div>
 
-</div>
-
 </section>
-
 
 
 <!-- PROJECTS -->
 <section id="projects">
 
-<div class="container">
-
-    <h2 class="section-title">
-        Featured Projects
-    </h2>
-
-    <p class="section-sub">
-        Some of my academic and development projects
-    </p>
-
+    <div class="title">
+        <h2>My <span>Projects</span></h2>
+        <p>Some of my academic and personal projects</p>
+    </div>
 
     <div class="projects">
 
-
-        <div class="card">
-
-            <div class="project-icon">
-                🎓
-            </div>
-
-            <h3>
-                Student Management System
-            </h3>
-
+        <div class="project">
+            <h3>🌐 Personal Portfolio</h3>
             <p>
-                A database management project designed to store
-                and manage student information efficiently.
+                A modern responsive portfolio website built
+                using HTML and CSS to showcase my skills,
+                education and projects.
             </p>
-
-            <span class="tag">
-                MySQL • DBMS
-            </span>
-
         </div>
 
-
-
-        <div class="card">
-
-            <div class="project-icon">
-                🔎
-            </div>
-
-            <h3>
-                Lost & Found Website
-            </h3>
-
+        <div class="project">
+            <h3>🎓 Student Management System</h3>
             <p>
-                A website project designed to help users report,
-                manage and find lost items.
+                A database-based student management project
+                designed to manage student information efficiently.
             </p>
-
-            <span class="tag">
-                Web Development
-            </span>
-
         </div>
 
-
-
-        <div class="card">
-
-            <div class="project-icon">
-                ⚡
-            </div>
-
-            <h3>
-                Academic Projects
-            </h3>
-
+        <div class="project">
+            <h3>🔎 Lost & Found System</h3>
             <p>
-                Hands-on work involving programming, algorithms,
-                databases, microprocessors and software development.
+                A web-based system for reporting and finding
+                lost items in an organized way.
             </p>
-
-            <span class="tag">
-                CSE • Learning
-            </span>
-
         </div>
 
+        <div class="project">
+            <h3>📱 Mobile Application</h3>
+            <p>
+                Academic mobile application project developed
+                while learning mobile app development.
+            </p>
+        </div>
 
     </div>
 
-</div>
-
 </section>
-
 
 
 <!-- EDUCATION -->
 <section id="education">
 
-<div class="container">
+    <div class="title">
+        <h2>My <span>Education</span></h2>
+        <p>My academic journey</p>
+    </div>
 
-    <h2 class="section-title">
-        Education
-    </h2>
+    <div class="education">
 
-    <p class="section-sub">
-        My academic journey
-    </p>
-
-
-    <div class="timeline">
-
-        <div class="timeline-item">
-
-            <h3>
-                B.Sc. in Computer Science & Engineering
-            </h3>
-
+        <div class="edu">
+            <h3>B.Sc. in Computer Science & Engineering</h3>
             <p>
-                CCN University of Science and Technology
+                CCN University of Science & Technology
             </p>
-
             <p>
-                Currently pursuing
+                Department of Computer Science & Engineering
             </p>
-
         </div>
 
-
-        <div class="timeline-item">
-
-            <h3>
-                Continuous Learning
-            </h3>
-
+        <div class="edu">
+            <h3>Higher Secondary Certificate (HSC)</h3>
             <p>
-                Programming • Database Management • Algorithms
-                • Web Development • Computer Architecture
+                Science Background
             </p>
+        </div>
 
+        <div class="edu">
+            <h3>Secondary School Certificate (SSC)</h3>
+            <p>
+                Science Background
+            </p>
         </div>
 
     </div>
 
-</div>
-
 </section>
-
 
 
 <!-- CONTACT -->
 <section id="contact">
 
-<div class="container">
-
-    <h2 class="section-title">
-        Let's Connect
-    </h2>
-
-    <p class="section-sub">
-        Have a project, opportunity or idea? I'd love to hear from you.
-    </p>
-
-
-    <div class="contact">
-
-
-        <div class="contact-box">
-
-            <h3>
-                📩 Email
-            </h3>
-
-            <p>
-                anikaislamshamonti@gmail.com
-            </p>
-
-        </div>
-
-
-        <div class="contact-box">
-
-            <h3>
-                🌐 GitHub
-            </h3>
-
-            <p>
-
-                <a
-                href="https://github.com/anikaislam-618"
-                target="_blank">
-
-                github.com/anikaislam-618
-
-                </a>
-
-            </p>
-
-        </div>
-
-
+    <div class="title">
+        <h2>Let's <span>Connect</span></h2>
+        <p>Feel free to get in touch with me</p>
     </div>
 
-</div>
+    <div class="contact-box">
+
+        <h2>Have a project or opportunity?</h2>
+
+        <p>
+            I'd love to hear from you.
+        </p>
+
+        <a class="email"
+           href="mailto:anikaislamshamonti@gmail.com">
+           📧 anikaislamshamonti@gmail.com
+        </a>
+
+        <div class="social">
+
+            <a href="mailto:anikaislamshamonti@gmail.com">
+                Email Me
+            </a>
+
+            <a href="https://github.com/anikaislam-618"
+               target="_blank">
+                GitHub
+            </a>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-
-<!-- FOOTER -->
 <footer>
-
-    © 2026 Anika Islam
-    • Built with HTML & CSS
-
+    © 2026 Anika Islam Shamonti. All Rights Reserved.
 </footer>
 
 
